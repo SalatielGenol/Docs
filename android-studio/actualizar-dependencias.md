@@ -1,4 +1,4 @@
-### Mantener actualizadas las dependencias de un proyecto
+## Mantener actualizadas las dependencias de un proyecto
 
 Nota: ésto no es obligatorio, y habrá veces que no se deba realizar ya que parte de nuestro código
 esté implementado con librerías que, de actualizarse, romperán el buen funcionamiento de la aplicación.
