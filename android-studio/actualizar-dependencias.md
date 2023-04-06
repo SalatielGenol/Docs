@@ -7,29 +7,29 @@ Por lo que para ello es necesario documentarse sobre que cambios han hecho en la
 a nuestro código una vez actualizada la dependencia.
 
 1. Modificar en el archivo build.gradle del módulo (en éste caso app):
-    - implementation 'androidx.core:core-ktx:X.X.X'
+    - `implementation 'androidx.core:core-ktx:X.X.X'`
         - https://developer.android.com/jetpack/androidx/releases/core
-    - implementation 'androidx.lifecycle:lifecycle-runtime-ktx:X.X.X'
+    - `implementation 'androidx.lifecycle:lifecycle-runtime-ktx:X.X.X'`
         - https://developer.android.com/jetpack/androidx/releases/lifecycle
-    - implementation 'androidx.activity:activity-compose:X.X.X'
+    - `implementation 'androidx.activity:activity-compose:X.X.X'`
         - https://developer.android.com/jetpack/androidx/releases/activity
-    - implementation 'androidx.compose.material:material:X.X.X'
+    - `implementation 'androidx.compose.material:material:X.X.X'`
         - https://developer.android.com/jetpack/androidx/releases/compose-material
 
         Para modificar los valores de las versiones no es necesario ir visitando los enlaces, bastará con pulsar Alt+Enter encima de la librería que queramos actualizar, y el IDE nos hará la sugerencia de la última versión disponible.
 
-    - kotlinCompilerExtensionVersion 'X.X.X'
+    - `kotlinCompilerExtensionVersion 'X.X.X'`
         - https://developer.android.com/jetpack/androidx/releases/compose-compiler
 
     Éste es el compilador de compose, y está directamente relacionado con la versión de kotlin que se utiliza en el proyecto, que se trata en el siguiente punto.
 
 2. Modificar en el archivo build.graddle del proyecto:
-    - compose_ui_version = 'X.X.X'
+    - `compose_ui_version = 'X.X.X'`
         - https://developer.android.com/jetpack/androidx/releases/compose-ui
 
     **[OPCIONAL]**
-    - id 'com.android.application' version 'X.X.X' apply false
-    - id 'com.android.library' version 'X.X.X' apply false
+    - `id 'com.android.application' version 'X.X.X' apply false`
+    - `id 'com.android.library' version 'X.X.X' apply false`
         - https://developer.android.com/reference/tools/gradle-api
         - https://developer.android.com/build/releases/gradle-plugin
 
@@ -37,14 +37,14 @@ a nuestro código una vez actualizada la dependencia.
 
 
     **[/OPCIONAL]**
-    - id 'org.jetbrains.kotlin.android' version 'X.X.X' apply false
+    - `id 'org.jetbrains.kotlin.android' version 'X.X.X' apply false`
         - https://kotlinlang.org/docs/releases.html#release-details
 
     La versión de kotlin que utilicemos debe estar soportada por el compilador de compose. Para saber cual es la adecuada, en la documentación hay un mapa de compatibilidad:
-        - https://developer.android.com/jetpack/androidx/releases/compose-kotlin
+        https://developer.android.com/jetpack/androidx/releases/compose-kotlin
 
 3. **[OPCIONAL]** Modificar en el archivo gradle-wrapper.properties:
-    - distributionUrl=https\://services.gradle.org/distributions/gradle-X.X-bin.zip
+    - `distributionUrl=https\://services.gradle.org/distributions/gradle-X.X-bin.zip`
         - https://docs.gradle.org/current/userguide/compatibility.html
         - https://gradle.org/releases/
 
